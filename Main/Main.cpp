@@ -30,6 +30,5 @@ int main() {
 	cin >> x;
 
 	toBit(x);
-	cout << "test";
 	return 0;
 }
