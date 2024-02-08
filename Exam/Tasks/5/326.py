@@ -6,10 +6,11 @@ def R(N):
         n = n + "0" + n[-1]
     return int(n, 2)
 
+
 r = {}
 
 for N in range(1, 10_000):
     if R(N) > 100:
         r[R(N)] = N
-        
-print(r[min(r.keys())]) # 25
+
+print(r[min(r.keys())])  # 25
