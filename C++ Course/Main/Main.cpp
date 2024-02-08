@@ -46,7 +46,6 @@ int main() {
 	cout << "Biggest list: ";
 	for (int num : biggestList) { cout << num << " "; }
 	cout << endl << "Biggest sum: " << max << endl;
-	
 
 	return 0;
 }
