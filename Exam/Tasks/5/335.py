@@ -15,14 +15,11 @@ def R(N):
     x = str(min(sum_1, sum_2)) + str(max(sum_1, sum_2))
     return int(x)
 
+l = []
 
-mn = 10 ** 10
-mx = -1
-
-for N in range(1, 100):
+for N in range(8**3, 8**4):
     if R(N) == 317:
-        mn = min(mn, N)
-        mx = max(mx, N)
+        l.append(N)
 
-print(mn + mx)
+print(min(l) + max(l))
 # ????
