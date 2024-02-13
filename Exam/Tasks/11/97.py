@@ -16,3 +16,4 @@ I_2 = k_2 * i_2
 I_user = I_1 + I_2 + I_extra
 users = int(I_alloc / I_user)
 print(users)
+# 16
