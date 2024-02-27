@@ -7,3 +7,4 @@ while "4444" in s or "777" in s:
         s = s.replace("777", "4")
 
 print(s)
+# 44
