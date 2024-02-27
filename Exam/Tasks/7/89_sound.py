@@ -6,7 +6,7 @@ t = (4 * 60) + 5
 I = 46 * 1024 * 1024 * 8
 # imax = ?
 
-# I = f * i * x * t
+# I = f * x * x * t
 imax = int(I / (f * x * t))
 print(imax)
 # 16

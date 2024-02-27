@@ -8,7 +8,7 @@ N2 = 256
 i2 = log2(N2)
 # I2avg = ?mb
 
-# I = k * i
+# I = k * x
 k = I1avg / i1
 
 I2avg = k * i2

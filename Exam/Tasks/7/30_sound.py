@@ -6,7 +6,7 @@ i = 16
 I = 48 * 1024 * 1024 * 8
 # t = ? (min)
 
-# I = f * i * x * t
+# I = f * x * x * t
 t = I / (f * i * x)
 t_min = int(t) / 60
 print(t_min)

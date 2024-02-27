@@ -1,7 +1,7 @@
 from math import log2
 
-# N = 2 ** i
-# I = k * i
+# N = 2 ** x
+# I = k * x
 
 N1 = 256
 N2 = 2

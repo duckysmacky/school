@@ -6,7 +6,7 @@ roman_ = new_dict = { value: key for key, value in roman.items() }
 
 
 # Q = int(input())
-# for i in range(Q):
+# for x in range(Q):
 
 x = int(input())
 for dec_num in list(roman.values())[1:]:
