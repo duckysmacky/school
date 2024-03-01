@@ -9,9 +9,9 @@ def f(s: str):
     return s
 
 
-for n in range(3, 10_000):
+for n in range(4, 10_000):
     S = "2" + n * "5"
-    if sum(list(map(int, f(S)))) & 7 == 0:
+    if sum(list(map(int, f(S)))) % 7 == 0:
         print(n)
         break
-# 9
+# 21

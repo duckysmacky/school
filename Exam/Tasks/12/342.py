@@ -7,15 +7,15 @@ def f(s: str):
                 s = s.replace("11", "25", 1)
             if "2" in s:
                 s = s.replace("2", "5", 1)
-    return s
+    return s.replace(">", "")
 
 
-m = -10 * 11
+d = {}
 
 for n in range(101, 10_000):
-    S = n * "5"
     if n % 9 == 0:
-        m = max(m, int(f(S).replace(">", "")))
-        break
-print(m)
-# 15
+        S = f(n * "5")
+        d[int(S)] = n
+
+print(d.get(max(d.keys())))
+# 981
