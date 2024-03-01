@@ -7,7 +7,7 @@ def f(s: str):
                 s = s.replace("11", "25", 1)
             if "2" in s:
                 s = s.replace("2", "5", 1)
-    return s.replace(">", "")
+    return s
 
 
 d = {}
