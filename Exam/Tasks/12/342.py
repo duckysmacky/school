@@ -11,14 +11,11 @@ def f(s: str):
 
 
 d = {}
-m = -10 ** 11
 
 for n in range(101, 10_000):
     if n % 9 == 0:
         S = int(f(n * "5"))
-        m = max(m, S)
-        d[n] = S if S == m else 0
-
+        d[n] = S
 
 print(d)
-# 108
+# 117
