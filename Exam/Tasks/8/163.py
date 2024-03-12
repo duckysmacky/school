@@ -1,20 +1,19 @@
 from itertools import product
 
-a = list(product("13579", repeat=2))
-b = list(product("02468", repeat=2))
 
-pairs = []
-for a_ in a:
-    for b_ in b:
-        pairs.append("".join(a_) + "".join(b_))
+def check(num: str):
+    for i in range(len(num) - 1):
+        if not (int(num[i]) % 2 == 0) == (int(num[i + 1]) % 2 != 0):
+            return False
+    return True
 
-print(pairs)
+
 count = 0
 for x in range(8 ** 7, 8 ** 8):
-    num = str(x)
-    if len(oct(x)[:2]) == 8 and len(set(num)) == len(num) and all("".join(p) not in num for p in a) and all("".join(p) not in num for p in b):
+    num = oct(x)[2:]
+    if len(set(num)) == len(num) and check(num):
         print(num)
         count += 1
 
 print(f"Count: {count}")
-# 15309
+# 1008
