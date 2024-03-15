@@ -7,4 +7,4 @@ for index, word in enumerate(words):
         print(index)
         break
 
-# 72
+# 73

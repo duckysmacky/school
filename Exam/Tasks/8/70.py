@@ -8,4 +8,4 @@ for word in words:
         count += 1
 
 print(count)
-# 81
+# 243
