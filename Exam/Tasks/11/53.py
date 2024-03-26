@@ -1,3 +1,4 @@
+# TODO
 from math import log2
 
 password_len = 20

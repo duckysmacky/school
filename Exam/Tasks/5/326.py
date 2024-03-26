@@ -1,3 +1,4 @@
+# TODO
 def R(N):
     n = bin(N)[2:]
     if N % 2 == 0:

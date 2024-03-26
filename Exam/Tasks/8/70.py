@@ -1,3 +1,4 @@
+# TODO
 from itertools import product
 
 words = list(product("АБВГ", repeat=5))
