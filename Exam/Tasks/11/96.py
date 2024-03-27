@@ -1,3 +1,4 @@
+# TODO
 from math import log2
 
 k_1 = 15

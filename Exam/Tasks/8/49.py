@@ -1,10 +1,10 @@
 from itertools import product
 
-words = list(product("БАЛКОН", repeat=5))
+words = list(product("КАТЕР", repeat=3))
 count = 0
 for word in words:
-    if "Б" in word:
+    if word.count("Р") >= 2:
         count += 1
 
 print(count)
-# 4651
+# 13
