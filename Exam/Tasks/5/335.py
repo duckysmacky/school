@@ -7,9 +7,10 @@ def R(N):
     x = str(min(sum_1, sum_2)) + str(max(sum_1, sum_2))
     return int(x[::-1])
 
+
 l = []
 
-for N in range(8**3, 8**4):
+for N in range(8 ** 3, 8 ** 4):
     if R(N) == 317:
         l.append(N)
 
