@@ -9,8 +9,9 @@ void out(string name, vector<unsigned long> val) {
     cout << "\n";
 }
 
-// 21 108 1
-// 5 12 4
+// 21 108 1 - 216
+// 5 12 4 - -1
+// 4 42 4 - 42000
 
 int main() {
     unsigned long n, k, d;
@@ -47,5 +48,11 @@ int main() {
             break;
         }
     }
-    if (results.size() > 0) out("results", results); else cout << "-1";
+    unsigned long max = 0;
+    if (results.size() > 0) {
+        for (unsigned long r : results) {
+            if (r > max) max = r;
+        }
+        cout << max;
+    } else cout << -1;
 }
