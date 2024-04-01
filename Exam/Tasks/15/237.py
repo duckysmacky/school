@@ -1,30 +1,22 @@
 # TODO
+D = range(133, 178)
+B = range(144, 191)
 
-def search(start, end):
-    D = range(133, 178)
-    B = range(144, 191)
+m = []
+ALL = 500
 
-    A = range(start, end)
-    for _ in A:
+for start in range(1, ALL):
+    for end in range(start, ALL):
         found = True
-        for x in range(1, 200):
-            # (x ∈ D) -> ((!(x ∈ B) ∧ !(x ∈ A)) -> !(x ∈ D))
+        for x in range(1, ALL):
+            A = range(start, end)
             if (not (x in D) or (not (not (x in B) and not (x in A)) or not (x in D))) == 1: continue
             found = False
             break
-        if found: return True
-
-    return False
-
-end_pos = 300
-while search(1, end_pos):
-    print(f"End: {end_pos}")
-    end_pos -= 1
-
-start_pos = 1
-while search(start_pos, 300):
-    print(f"Start: {start_pos}")
-    start_pos += 1
-
-print(f"Answer: {end_pos - start_pos}")
-# >45
+        if found: break
+    print(start, end)
+    m.append(end - start)
+        
+print(m)
+# 11
+# correct: 120
