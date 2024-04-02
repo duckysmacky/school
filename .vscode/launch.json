@@ -34,8 +34,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Projects/School/Competitions/HighProbe/Selection",
-      "program": "d:/Projects/School/Competitions/HighProbe/Selection/build/Debug/outDebug",
+      "cwd": "d:/projects/School/Competitions/HighProbe/Selection",
+      "program": "d:/projects/School/Competitions/HighProbe/Selection/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
