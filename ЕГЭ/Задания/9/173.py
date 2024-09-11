@@ -1,22 +1,13 @@
+from functools import reduce
+from statistics import geometric_mean
+
 file = open("files/9-170.csv")
 count = 0
-
-
-def check(rep, uni) -> bool:
-    lst = []
-    for r in rep:
-        if rep.count(r) != 2: continue
-        for u in uni:
-            lst.append(r > u)
-    return all(lst)
-
-
 for line in file:
     nums = list(map(int, line.split(';')))
     repeating = [x for x in nums if nums.count(x) != 1]
     unique = [x for x in nums if nums.count(x) == 1]
-    if len(repeating) >= 2 and check(repeating, unique):
+    if len(unique) == 2 and geometric_mean(repeating) >= reduce(lambda val, x: val * x, unique):
         print(repeating, unique)
-        # print(nums)
         count += 1
 print(count)
