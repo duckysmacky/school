@@ -1,3 +1,3 @@
 from itertools import product
 
-print(list(product("АИМРЯ", repeat=5))[211 - 1])
+print(list(product("АИМРЯ", repeat=4))[211 - 1])

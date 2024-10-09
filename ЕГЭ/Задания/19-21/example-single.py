@@ -1,6 +1,5 @@
 from functools import lru_cache
 
-
 @lru_cache(None)
 def action(stones: int) -> int:
     """
@@ -18,7 +17,6 @@ def action(stones: int) -> int:
     if len(successful) > 0:
         return -max(successful) + 1
     return -max(actions)
-
 
 for stones in range(20, 100):
     print(stones, action(stones))

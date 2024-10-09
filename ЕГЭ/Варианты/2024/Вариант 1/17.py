@@ -17,4 +17,3 @@ for i in range(len(nums) - 1):
         pairs.append(pair)
 
 print(len(pairs), max(sum(num_sum(x) for x in p) for p in pairs))
-print(pairs)

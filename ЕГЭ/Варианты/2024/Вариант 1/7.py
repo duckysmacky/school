@@ -7,4 +7,4 @@ for i in range(1, 10_000):
     I = k * i_total
     I_compressed = I * 0.8
     if I_compressed <=I_alloc:
-        print(i)
+        print(2 ** i)
