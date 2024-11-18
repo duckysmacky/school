@@ -2,7 +2,7 @@ from os import makedirs
 from os.path import exists
 
 print("Генерация шаблона варианта")
-year = input("Раздел (год, автов или др.): ")
+year = input("Раздел (год, автор или др.): ")
 number = input("Номер варианта: ")
 dir = f"{year}/Вариант {number}"
 
