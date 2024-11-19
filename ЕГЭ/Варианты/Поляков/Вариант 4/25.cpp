@@ -14,7 +14,7 @@ vector<int> find_divs(int num)
         if (num % div == 0)
         {
             divs.push_back(div);
-            if (div != (num / div) /* && ((num / div) & 1) == 1 */)
+            if (div != (num / div) && ((num / div) & 1) != 0)
                 divs.push_back(num / div);
         }
 
