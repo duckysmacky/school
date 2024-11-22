@@ -14,3 +14,18 @@
 229 - zxyw
 230 - xyzw
 231 - zyxw
+
+
+1 - zxy
+2 - zywx
+3 - zwxy
+4 - ywzx
+5 - yxzw
+6 - yxwz
+7 - xwzy
+8 - yxwz
+9 - xwyz
+10 - zyxw
+11 - zxyw
+12 - xzwy
+13 - zyxw
