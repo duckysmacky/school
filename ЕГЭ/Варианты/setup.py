@@ -2,9 +2,9 @@ from os import makedirs
 from os.path import exists
 
 print("Генерация шаблона варианта")
-year = input("Раздел (год, автор или др.): ")
+category = input("Раздел (год, автор или др.): ")
 number = input("Номер варианта: ")
-dir = f"{year}/Вариант {number}"
+dir = f"{category}/Вариант {number}"
 
 print(f"{dir}/!answers.txt")
 if not exists(dir):
