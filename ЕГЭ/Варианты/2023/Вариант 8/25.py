@@ -1,14 +1,14 @@
-def sq_sum(x: int) -> tuple | None:
-    ab = ()
-    for div in range(1, int(x ** 0.5) + 1):
-        a, b = div, x // div
-        if a ** 2 + b ** 2 == x:
-            if ab != ():
+def find_sum(x: int) -> tuple | None:
+    sq_sum = ()
+    for a in range(1, int(x ** 0.5) + 1):
+        b = (x - a ** 2) ** 0.5
+        if b == int(b) and a <= b:
+            if sq_sum != ():
                 return None
-            ab = (a, b)
-    return ab
+            sq_sum = (a, int(b))
+    return sq_sum
 
 for num in range(164_361, 164_423 + 1):
-    sqs = sq_sum(num)
-    if sqs != None and sqs != ():
-        print(sqs)
+    sq_sum = find_sum(num)
+    if sq_sum != None and sq_sum != ():
+        print(sq_sum)
