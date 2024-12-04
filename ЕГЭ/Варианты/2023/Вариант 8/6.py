@@ -4,6 +4,7 @@ k = 20
 screensize(2000, 2000)
 tracer(0)
 
+left(90)
 pendown()
 right(90)
 for i in range(15):
