@@ -1,0 +1,1 @@
+SELECT DISTINCT class FROM students WHERE grade > 4
