@@ -1,18 +1,10 @@
-file = open("1.txt")
-text = file.readline().replace('-', '+')
+file = open("24-309.txt")
+text = "FSRQ" + file.readline() + "FSRQ"
+# text = "FSRQ**FSRQ**FSRQ***FSRQ***FSRQ***FSRQ"
 
-max_val = ''
-val = ''
-for num in text.split('+'):
-    if len(num) > 0:
-        if num[0] != '0' or num == '0':
-            val += num + '+'
-        elif num[0] == '0':
-            val += "0+"
-            max_val = max(max_val, val, key=len)
-            val = str(int(num)) + '+'
-    else:
-        val = ''
-    max_val = max(max_val, val, key=len)
-print(max_val)
-print(len(max_val) - 1)
+indexes = [i for i in range(len(text)) if text[i:i + 4] == "FSRQ"]
+step = 80 + 1
+lens = []
+for i in range(len(indexes) - step):
+    lens.append(indexes[i + step] - indexes[i])
+print(max(lens) + 2)
