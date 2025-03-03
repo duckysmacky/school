@@ -2,18 +2,20 @@ file = open("17.txt")
 nums = list(map(int, file.readlines()))
 triples = []
 
-sum_all = sum(x for x in nums if x % 12 == 0)
+def num_sum(num):
+    return sum(map(int, str(num)))
+
+sum_all = sum(num_sum(x) for x in nums if x % 12 == 0)
 
 def check(nums):
-    vals = (nums[0] % (nums[1] + nums[2]) == 0) \
-        + (nums[1] % (nums[2] + nums[0]) == 0) \
-        + (nums[2] % (nums[0] + nums[1]) == 0)
+    vals = 0
+    for a, b, c in [(0, 1, 2), (1, 2, 0), (2, 0, 1)]:
+        vals += nums[a] % (num_sum(nums[b]) + num_sum(nums[c])) == 0
     return vals == 1
 
 for i in range(len(nums) - 2):
     triple = nums[i:i + 3]
-    print(triple)
-    if check(nums) and sum(triple) < sum_all:
+    if check(triple) and sum(triple) < sum_all:
         triples.append(triple)
 
 print(len(triples), sum(max(triples, key=sum)))
